@@ -24,7 +24,7 @@ partial class AppDbContextModelSnapshot : ModelSnapshot
                 .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
             b.Property<string>("Cpf").IsRequired().HasMaxLength(14).HasColumnType("character varying(14)");
-            b.Property<DateTime>("DataNascimento").HasColumnType("timestamp with time zone");
+            b.Property<DateTime>("DataNascimento").HasColumnType("date");
             b.Property<string>("Endereco").IsRequired().HasMaxLength(200).HasColumnType("character varying(200)");
             b.Property<string>("Nome").IsRequired().HasMaxLength(100).HasColumnType("character varying(100)");
             b.Property<string>("Telefone").IsRequired().HasMaxLength(20).HasColumnType("character varying(20)");
