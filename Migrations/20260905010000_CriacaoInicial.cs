@@ -20,7 +20,7 @@ public partial class CriacaoInicial : Migration
                 Cpf = table.Column<string>(type: "character varying(14)", maxLength: 14, nullable: false),
                 Telefone = table.Column<string>(type: "character varying(20)", maxLength: 20, nullable: false),
                 Endereco = table.Column<string>(type: "character varying(200)", maxLength: 200, nullable: false),
-                DataNascimento = table.Column<DateTime>(type: "timestamp with time zone", nullable: false)
+                DataNascimento = table.Column<DateTime>(type: "date", nullable: false)
             },
             constraints: table =>
             {
