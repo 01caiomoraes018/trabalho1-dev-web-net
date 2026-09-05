@@ -1,0 +1,42 @@
+@model IEnumerable<Paciente>
+@{
+    ViewData["Title"] = "Pacientes";
+}
+
+<div class="page-header">
+    <div>
+        <h1>Pacientes</h1>
+        <p>Gerenciamento dos pacientes cadastrados.</p>
+    </div>
+    <a class="btn btn-primary" asp-action="Create">Novo paciente</a>
+</div>
+
+<div class="table-card">
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>CPF</th>
+                <th>Telefone</th>
+                <th>Data de Nascimento</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var paciente in Model)
+        {
+            <tr>
+                <td>@paciente.Nome</td>
+                <td>@paciente.Cpf</td>
+                <td>@paciente.Telefone</td>
+                <td>@paciente.DataNascimento.ToString("dd/MM/yyyy")</td>
+                <td class="actions">
+                    <a asp-action="Details" asp-route-id="@paciente.Id">Detalhes</a>
+                    <a asp-action="Edit" asp-route-id="@paciente.Id">Editar</a>
+                    <a class="danger-link" asp-action="Delete" asp-route-id="@paciente.Id">Remover</a>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>
