@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Trabalho1DevWebNet.Models;
 
@@ -26,6 +27,7 @@ public class Paciente
 
     [Required(ErrorMessage = "A data de nascimento é obrigatória.")]
     [DataType(DataType.Date)]
+    [Column(TypeName = "date")]
     [Display(Name = "Data de Nascimento")]
     public DateTime DataNascimento { get; set; }
 }
