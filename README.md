@@ -21,10 +21,10 @@ A entidade possui Nome, CPF, Telefone, Endereço e Data de Nascimento.
 
 O projeto utiliza PostgreSQL com o provedor `Npgsql.EntityFrameworkCore.PostgreSQL`.
 
-Antes de executar, altere a senha do PostgreSQL em `appsettings.json`, se necessário:
+Antes de executar, substitua `Senha` pela senha do usuário `postgres` configurada na sua máquina no arquivo `appsettings.json`:
 
 ```json
-"DefaultConnection": "Host=localhost;Port=5432;Database=agendamento_db;Username=postgres;Password=postgres"
+"DefaultConnection": "Host=localhost;Port=5432;Database=agendamento_db;Username=postgres;Password=Senha"
 ```
 
 Depois execute:
